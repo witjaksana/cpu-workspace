@@ -1,0 +1,3 @@
+[submodule "iss-qemu"]
+	path = iss-qemu
+	url = https://github.com/witjaksana/qemu.git
