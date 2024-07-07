@@ -4,14 +4,11 @@ This repository contains my experiment on CPU performance
 ## Compilation
 ### qemu
 ```
-git clone --recursive https://github.com/witjaksana/qemu.git iss-qemu
-cd qemu
+cd iss-qemu
 ./runcompile.sh
 ```
 
 ### buildroot
-wget -c https://buildroot.org/downloads/buildroot-2024.02.3.tar.gz
-tar xvf buildroot-2024.02.3.tar.gz
 ```
 cd buildroot-2024.02.3
 make ARCH=arm64 qemu_aarch64_virt_defconfig
@@ -25,9 +22,6 @@ sudo make -j8
 ```
 
 ### linux
-wget -c https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.tar.xz
-tar xvf linux-6.9.tar.xz
-
 ```
 cd linux-6.9
 make CROSS_COMPILE=aarch64-none-linux-gnu- ARCH=arm64 defconfig
